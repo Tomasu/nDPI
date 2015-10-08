@@ -196,6 +196,8 @@ extern "C" {
   char* ndpi_revision(void);
   void ndpi_set_automa(struct ndpi_detection_module_struct *ndpi_struct, void* automa);
 
+  int ndpi_handle_rule(struct ndpi_detection_module_struct *ndpi_mod, char* rule, u_int8_t do_add);
+  
 #define ADD_TO_DETECTION_BITMASK             1
 #define NO_ADD_TO_DETECTION_BITMASK          0
 #define SAVE_DETECTION_BITMASK_AS_UNKNOWN    1
