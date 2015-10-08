@@ -2788,7 +2788,7 @@ static u_int8_t ndpi_detection_get_l4_internal(struct ndpi_detection_module_stru
   iph = (const struct ndpi_iphdr *) l3;
 
   if(iph->version == 4 && iph->ihl >= 5) {
-    NDPI_LOG(NDPI_PROTOCOL_UNKNOWN, ndpi_struct, NDPI_LOG_DEBUG, "ipv4 header\n");
+    //NDPI_LOG(NDPI_PROTOCOL_UNKNOWN, ndpi_struct, NDPI_LOG_DEBUG, "ipv4 header\n");
   }
 #ifdef NDPI_DETECTION_SUPPORT_IPV6
   else if(iph->version == 6 && l3_len >= sizeof(struct ndpi_ipv6hdr)) {
@@ -2909,7 +2909,7 @@ static int ndpi_init_packet_header(struct ndpi_detection_module_struct *ndpi_str
 #endif							/* NDPI_DETECTION_SUPPORT_IPV6 */
 
   if(decaps_iph->version == 4 && decaps_iph->ihl >= 5) {
-    NDPI_LOG(NDPI_PROTOCOL_UNKNOWN, ndpi_struct, NDPI_LOG_DEBUG, "ipv4 header\n");
+    //NDPI_LOG(NDPI_PROTOCOL_UNKNOWN, ndpi_struct, NDPI_LOG_DEBUG, "ipv4 header\n");
   }
 #ifdef NDPI_DETECTION_SUPPORT_IPV6
   else if(decaps_iph->version == 6 && l3len >= sizeof(struct ndpi_ipv6hdr) &&
